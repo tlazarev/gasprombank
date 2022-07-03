@@ -45,12 +45,12 @@ sub query_links($) {
         }
         else {
             print("<p style=\"color:red\">Warning: max number of records exceeded, only first 100 are displayed!</p>");
-            return 1;
+            return;
         }
         $current_records_num++;
     }
     if ($current_records_num == 0) {
-        print("<p style=\"color:red\"><b>E-mail was not found at any tables!</b></p>");
+        print("<h1><p style=\"color:red\">E-mail was not found at any tables!</p></h1>");
     }
     $sth->finish();
     return 0;
